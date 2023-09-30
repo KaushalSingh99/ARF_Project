@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+
+<style>
+    .Table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headingRow {
+        height: 2rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .everyData {
+        padding: .2rem 3rem;
+        width: 5vw;
+    }
+
+    .index {
+        text-align: center;
+    }
+
+    .role {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+</style>
+
+<body>
+    <table class="Table">
+        <tr class="headingRow">
+            <th>Sr. No.</th>
+            <th>id</th>
+            <th>Role</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Rank</th>
+        </tr>
+        <%data.forEach((data, index)=>{%>
+        <tr class="colData">
+            <td class="everyData index"><%=index+1 %></td>
+            <td class="everyData id"><%=data._id %></td>
+            <td class="everyData role"><%=data.role %></td>
+            <td class="everyData name"><%=data.name %></td>
+            <td class="everyData email"><%=data.email %></td>
+            <td class="everyData contactNum"><%=data.contactNum %></td>
+            <td class="everyData rank"><%=data.rank %></td>
+        </tr>
+        <%}) %>
+    </table>
+</body>
+
+</html>
